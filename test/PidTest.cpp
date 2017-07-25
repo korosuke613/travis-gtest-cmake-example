@@ -105,7 +105,7 @@ TEST_F( detectBarrierTest, setDel_getDel_Test1 )
     // コンストラクタの引数targetに30を入れる
     test.pid.setPid(0.5, 0.5, 0.5, 30.0);
     // calculateにtarget以下の値を入力する
-    test.change_del(0.001)
+    test.change_del(0.001);
     // アウトプットは0になる
     double output = test.pid.getDel();
     ASSERT_DOUBLE_EQ( output, 0.001 );
