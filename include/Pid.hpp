@@ -4,6 +4,7 @@
 #include <cstdio>
 
 class Pid{
+  friend class TEST_CLASS;
   //menber variables
 private:
   double p_gain;
