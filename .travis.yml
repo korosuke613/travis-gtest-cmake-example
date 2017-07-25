@@ -1,5 +1,14 @@
 language: cpp
-
+cache:
+  - gcc-4.8
+  - g++-4.8
+  #- gcov-4.9
+  - clang-3.7
+  - valgrind
+  # Misc
+  - python-yaml
+  - lcov
+  - libopencv-dev
 env:
   global:
     # Ubuntu version
