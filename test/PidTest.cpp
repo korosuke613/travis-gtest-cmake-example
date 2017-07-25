@@ -20,14 +20,6 @@ public:
     }
 };
 
-class TEST_CLASS2 : public iutest::Test{
-public:
-    Pid pid(0.5, 0.5, 0.5, 30.0);
-    void change_del(double next_del) {
-        pid.chenge_del(next_del);
-    }
-};
-
 // Pidのtarget以下の数字を入力すると負の数を出力する
 TEST( detectBarrierTest, CalculateTest1 )
 {
@@ -94,19 +86,4 @@ TEST( detectBarrierTest, limitOutputTest3 )
     // アウトプットは0になる
     double output = pid.limitOutput(pid.get_output());
     ASSERT_DOUBLE_EQ( output, 0.0 );
-}
-
-
-// Pidの出力が100~-100の範囲だとそのまま
-TEST_F( detectBarrierTest, setDel_getDel_Test1 )
-{
-    TEST_CLASS2 test;
-
-    // コンストラクタの引数targetに30を入れる
-    test.pid.setPid(0.5, 0.5, 0.5, 30.0);
-    // calculateにtarget以下の値を入力する
-    test.change_del(0.001);
-    // アウトプットは0になる
-    double output = test.pid.getDel();
-    ASSERT_DOUBLE_EQ( output, 0.001 );
 }

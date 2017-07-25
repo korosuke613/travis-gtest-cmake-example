@@ -48,13 +48,6 @@ void Pid::calculate(double light_value) {
 double Pid::get_output() {
     return output;
 }
-void Pid::change_del(double next_del) {
-    del = next_del;
-}
-
-double Pid::getDel(){
-    return del;
-}
 
 /*
  * PID値を入力する
