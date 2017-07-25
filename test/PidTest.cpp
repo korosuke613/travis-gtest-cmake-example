@@ -20,7 +20,7 @@ public:
     }
 };
 
-class TEST_CLASS2 : public::iutest::Test{
+class TEST_CLASS2 : public iutest::Test{
 public:
     Pid pid(0.5, 0.5, 0.5, 30.0);
     void change_del(double next_del) {
