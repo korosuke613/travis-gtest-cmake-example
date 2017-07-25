@@ -98,7 +98,7 @@ TEST( detectBarrierTest, limitOutputTest3 )
 
 
 // Pidの出力が100~-100の範囲だとそのまま
-TEST( detectBarrierTest, setDel_getDel_Test1 )
+TEST_F( detectBarrierTest, setDel_getDel_Test1 )
 {
     TEST_CLASS2 test;
 
