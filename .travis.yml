@@ -23,7 +23,7 @@ env:
 matrix:
   include:
     - os: linux
-      dist: precise
+      # dist: precise
       sudo: true
       compiler: gcc
       addons:
