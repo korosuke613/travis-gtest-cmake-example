@@ -15,7 +15,7 @@ Rest of code in root:
 -`CMakeLists.txt` must be in each subdirectory of the project  
 
 # What do I do?
-
+a
 ## Use it on Travis-CI:
 Please look at the travis.yml file to see the setup of travis. As the gtest library is located within your project. The procedure on Travis is quite simple. Note that I used a more recent version of `cmake` as provided in the `ubuntu precise` repositories. This is needed for the relatively recent command `REMOVE_ITEM` to exclude the `main.cpp` from the source file list as I am lazy and did not want to write out the files by name.
 
