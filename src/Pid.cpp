@@ -52,6 +52,10 @@ void Pid::change_del(double next_del) {
     del = next_del;
 }
 
+double Pid::getDel(){
+    return del;
+}
+
 /*
  * PID値を入力する
  */
@@ -60,13 +64,6 @@ void Pid::setPid(double _p_gain, double _i_gain, double _d_gain, double _target)
     i_gain = _i_gain;
     d_gain = _d_gain;
     target = _target;
-}
-
-/*
- * target値を入力する
- */
-void Pid::setTarget(double _target) {
-    wrapper_of_constructor(p_gain, i_gain, d_gain, 0, 0, _target, 0);
 }
 
 double Pid::limitOutput(double pid_value){

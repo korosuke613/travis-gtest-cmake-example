@@ -87,3 +87,18 @@ TEST( detectBarrierTest, limitOutputTest3 )
     double output = pid.limitOutput(pid.get_output());
     ASSERT_DOUBLE_EQ( output, 0.0 );
 }
+
+
+// Pidの出力が100~-100の範囲だとそのまま
+TEST( detectBarrierTest, setDel-getDel-Test1 )
+{
+    TEST_CLASS pid;
+
+    // コンストラクタの引数targetに30を入れる
+    pid.setPid(0.5, 0.5, 0.5, 30.0);
+    // calculateにtarget以下の値を入力する
+    pid.change_del(0.001)
+    // アウトプットは0になる
+    double output = pid.getDel();
+    ASSERT_DOUBLE_EQ( output, 0.001 );
+}

@@ -23,6 +23,7 @@ public:
   void setTarget(double _target);
   void calculate(double light_value);
   double get_output();
+  double getDel();
 
 protected:
     double limitOutput(double pid_value);
