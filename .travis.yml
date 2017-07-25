@@ -12,7 +12,7 @@ cache:
 env:
   global:
     # Ubuntu version
-    - LINUX_DIST=trusty
+    - LINUX_DIST=precise
     - DEPS_DIR=${TRAVIS_BUILD_DIR}/deps
     # Global build options and C++ flags
     - CXX_FLAGS="-Wall -pedantic -Werror -Wno-variadic-macros -Wno-long-long -Wno-shadow"
@@ -23,7 +23,7 @@ env:
 matrix:
   include:
     - os: linux
-      # dist: precise
+      dist: precise
       sudo: true
       compiler: gcc
       addons:
